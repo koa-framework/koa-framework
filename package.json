@@ -1,0 +1,34 @@
+{
+  "name": "@luobotang/koa-framework",
+  "version": "0.1.0",
+  "description": "A simple framework on top of Koa.js",
+  "main": "koa-framework.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "koa": "^2.8.1",
+    "koa-trie-router": "^2.1.7",
+    "log4js": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint *.js example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luobotang/koa-framework.git"
+  },
+  "keywords": [
+    "koa.js"
+  ],
+  "author": "luobotang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luobotang/koa-framework/issues"
+  },
+  "homepage": "https://github.com/luobotang/koa-framework#readme"
+}
