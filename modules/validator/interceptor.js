@@ -78,6 +78,6 @@ module.exports = (app) => {
 
   const _default = defineValidateMaker(ctx => ctx.method === 'POST' ? ctx.request.body : ctx.query)
   _default.query = defineValidateMaker(ctx => ctx.query)
-  _default.query = defineValidateMaker(ctx => ctx.request.body)
+  _default.body = defineValidateMaker(ctx => ctx.request.body)
   return _default
 }
