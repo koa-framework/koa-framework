@@ -31,5 +31,12 @@ module.exports = (root, config) => {
   app.$load_file('router.js', (fn) => fn(app))
   app.use(app.router.middleware())
 
+  // 加载插件
+  if (Array.isArray(config.plugins)) {
+    for (let plugin of config.plugins) {
+      app.$load_plugin(plugin)
+    }
+  }
+
   return app
 }

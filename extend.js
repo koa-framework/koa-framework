@@ -9,7 +9,8 @@ module.exports = (app) => {
   const loggers = {
     app: log4js.getLogger('app')
   }
-  app.log = app.context.log = (...args) => loggers.app.info(...args)
+  app.coreLogger = loggers.app
+  app.log = app.context.log = (...args) => app.coreLogger.info(...args)
   app.getLogger = app.context.getLogger = (category) => loggers[category] || (loggers[category] = log4js.getLogger(category))
   // e.g. getFileLogger(__filename)
   app.getFileLogger = app.context.getFileLogger = (filename, category) => {
@@ -32,7 +33,7 @@ module.exports = (app) => {
       try {
         cb(require(path.join(dirpath, file)), filename)
       } catch(e) {
-        loggers.app.error(`load file "${dirname}/${file}" error:`, e)
+        app.coreLogger.error(`load file "${dirname}/${file}" error:`, e)
       }
     })
   }
@@ -45,7 +46,20 @@ module.exports = (app) => {
     try {
       cb(require(filepath))
     } catch(e) {
-      loggers.app.error(`load file "${filename}" error:`, e)
+      app.coreLogger.error(`load file "${filename}" error:`, e)
+    }
+  }
+
+  app.$load_plugin = (id) => {
+    try {
+      const plugin = require(id)
+      if (typeof plugin !== 'function') {
+        app.coreLogger.error(`插件无法加载，应暴露函数：${id}`)
+        return
+      }
+      plugin(app)
+    } catch (e) {
+      app.coreLogger.error(`加载插件失败：${id}`, e)
     }
   }
 }
