@@ -1,0 +1,14 @@
+{
+  "name": "@luobotang/koa-validator",
+  "version": "0.1.0",
+  "description": "data validator plugin for @luobotang/koa-framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "plugin"
+  ],
+  "author": "luobotang",
+  "license": "MIT"
+}
