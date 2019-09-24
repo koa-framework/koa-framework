@@ -66,7 +66,7 @@ module.exports = (app) => {
   return (name) =>{
     const validate = makeValidateFn(name)
     return async (ctx, next) => {
-      const message = validate(ctx.query)
+      const message = validate(ctx.method === 'POST' ? ctx.request.body : ctx.query)
       if (message) {
         logger.warn(message)
         ctx.throw(403, message)
@@ -74,5 +74,5 @@ module.exports = (app) => {
       }
       return await next()
     }
-  } 
+  }
 }
