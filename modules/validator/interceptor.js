@@ -63,10 +63,10 @@ module.exports = (app) => {
     return () => null
   }
 
-  return (name) =>{
+  const defineValidateMaker = (getData) => (name) => {
     const validate = makeValidateFn(name)
     return async (ctx, next) => {
-      const message = validate(ctx.method === 'POST' ? ctx.request.body : ctx.query)
+      const message = validate(getData(ctx))
       if (message) {
         logger.warn(message)
         ctx.throw(403, message)
@@ -75,4 +75,9 @@ module.exports = (app) => {
       return await next()
     }
   }
+
+  const _default = defineValidateMaker(ctx => ctx.method === 'POST' ? ctx.request.body : ctx.query)
+  _default.query = defineValidateMaker(ctx => ctx.query)
+  _default.query = defineValidateMaker(ctx => ctx.request.body)
+  return _default
 }

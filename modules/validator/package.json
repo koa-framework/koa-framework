@@ -1,6 +1,6 @@
 {
   "name": "@luobotang/koa-validator",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "data validator plugin for @luobotang/koa-framework",
   "main": "index.js",
   "scripts": {
