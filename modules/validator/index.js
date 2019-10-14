@@ -35,7 +35,7 @@ module.exports = (app) => {
 
   app.base_validators = base_validators
   const validators = app.validators = {}
-  
+
   /**
    * defineValidation('foo', 'notempty', 'string', ['length', 8, 36])
    */

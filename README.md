@@ -16,16 +16,16 @@ createApp(appRoot, appConfig).listen(8080, () => console.log('on 8080..'))
 
 创建应用时，koa-framework 在应用根目录下依次查找一下目录或文件并同步加载其中的模块：
 
-- extend 目录：扩展 app 对象，业务无关
+- plugin 目录：扩展 app 对象，业务无关
 - service 目录：全局服务，业务相关；按模块名称添加到 ```app.service``` 和 ```ctx.service```
 - middleware 目录：全局中间件；按模块名称添加到 ```app.middlewares```
 - interceptor 目录：特定路由拦截器；按模块名称添加到 ```app.interceptor```
 - controller 目录：路由处理；按模块名称添加到 ```app.controller```
 - router.js 文件：初始化应用路由
 
-## extend 目录
+## plugin 目录
 
-示例（```extend/db.js```）：
+示例（```plugin/db.js```）：
 
 ```js
 const mysql = require('mysql')
@@ -102,7 +102,7 @@ exports.byId = async (ctx) => {
 
 ## router.js 文件
 
-示例 ：
+示例：
 
 ```js
 module.exports = ({ router, middlewares, interceptor, controller }) => {
@@ -111,3 +111,36 @@ module.exports = ({ router, middlewares, interceptor, controller }) => {
   router.get('/user', interceptor.log('query-user'), controller.user.byId)
 }
 ```
+
+## 插件
+
+插件通过 app.config.plugins 指定，指定的插件按顺序依次记载。
+
+插件在 extend 之前加载。
+
+## API
+
+- ```app```
+  * ```.root```: 应用根目录
+  * ```.config```: 应用配置
+  * ```.service```
+  * ```.interceptor```
+  * ```.interceptor```
+  * ```.middlewares```
+  * ```.controller```
+  * ```.router```: ```koa-trie-router``` 路由实例，方法包括 ```router.use(...middleware)```、```router.get(path, ...middleware)```、```router.post(path, ...middleware)``` 等
+  * ```.coreLogger```
+  * ```.loggers```: 代理对象，```app.loggers.xxx``` 等价于 ```app.getLogger('xxx')```
+  * ```.log(...args)```: 等价于 ```app.coreLogger.info(...args)```
+  * ```.getLogger(category)```
+  * ```.getFileLogger(__filename)```
+  * ```.require(moduleId)```: 加载 ```<app.root>/modules``` 目录下的模块，```moduleId``` 为模块名称
+  * ```.$load_dir(dirname, cb)```: 加载 ```<app.root>/<dirname>``` 目录下的所有模块
+  * ```.$load_file(filename, cb)```: 加载 ```<app.root>/<filename>``` 文件，filename 必须以 ```.js``` 结尾
+  * ```.$load_plugin(id)```: 加载 ```id``` 指定的模块，以插件方式初始化（```require(id)(app)```）
+- ```ctx```
+  * ```.service```
+  * ```.loggers```
+  * ```.log(...args)```
+  * ```.getLogger(category)```
+  * ```.getFileLogger(__filename)```

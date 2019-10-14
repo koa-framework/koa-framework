@@ -1,0 +1,17 @@
+{
+  "name": "@luobotang/koa-mysql",
+  "version": "0.3.0",
+  "description": "mysql plugin for @luobotang/koa-framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mysql"
+  ],
+  "author": "luobotang",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.17.1"
+  }
+}
