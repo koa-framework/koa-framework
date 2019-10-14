@@ -1,10 +1,10 @@
 const mysql = require('mysql')
 
 module.exports = (app) => {
-  const logger = app.getLogger('"@luobotang/koa-mysql')
+  const logger = app.getLogger('@luobotang/koa-mysql')
   const pool = mysql.createPool(app.config.mysql)
 
-  logger.info('pool created')
+  logger.debug('pool created')
 
   app.db = app.context.db = {
     escape: (val) => mysql.escape(val),
