@@ -1,0 +1,14 @@
+{
+  "name": "@luobotang/koa-redis-cache",
+  "version": "0.3.0",
+  "description": "redis cache plugin for @luobotang/koa-framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "luobotang",
+  "license": "MIT",
+  "peerDependencies": {
+    "@luobotang/koa-redis": "0.3.x"
+  }
+}
