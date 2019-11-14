@@ -1,0 +1,20 @@
+{
+  "name": "@luobotang/koa-static",
+  "version": "0.3.0",
+  "description": "static plugin for @luobotang/koa-framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "luobotang",
+  "license": "MIT",
+  "dependencies": {
+    "koa-static": "^5.0.0"
+  },
+  "peerDependencies": {
+    "@luobotang/koa-framework": "^0.3.0"
+  },
+  "engines": {
+    "node": ">=8.3.0"
+  }
+}
