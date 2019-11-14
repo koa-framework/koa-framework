@@ -1,0 +1,14 @@
+{
+  "name": "@luobotang/koa-favicon",
+  "version": "0.3.0",
+  "description": "koa-favicon for @luobotang/koa-framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "luobotang",
+  "license": "MIT",
+  "dependencies": {
+    "koa-favicon": "^2.0.1"
+  }
+}
