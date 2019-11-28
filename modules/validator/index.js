@@ -27,6 +27,10 @@ const base_validators = {
       base_validators.string(value, key) ||
       base_validators.length(value, key, min, max)
     )
+  },
+  enum(value, key, ...values) {
+    if (!Array.isArray(values)) return key + ' 枚举为空'
+    if (values.indexOf(value) === -1) return key + ' 值不在枚举中'
   }
 }
 
