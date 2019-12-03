@@ -1,6 +1,6 @@
 {
   "name": "@luobotang/koa-mount",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "router extension for @luobotang/koa-framework",
   "main": "index.js",
   "scripts": {

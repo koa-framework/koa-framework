@@ -6,11 +6,13 @@ module.exports = (app) => {
     app.router.use(mount(path, ...middlewares))
   }
   // 匹配 - 执行
-  app.router.match = (path, middleware) => async (ctx, next) => {
-    if (ctx.path.startsWith(path)) {
-      await middleware(ctx, next)
-      return
-    }
-    await next()
+  app.router.match = (path, middleware) => {
+    app.router.use(async (ctx, next) => {
+      if (ctx.path.startsWith(path)) {
+        await middleware(ctx, next)
+        return
+      }
+      await next()
+    })
   }
 }
