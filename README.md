@@ -5,7 +5,7 @@
 ## 使用
 
 ```js
-const createApp = require('@luobotang/koa-framework')
+const createApp = require('@koa-framework/koa-framework')
 const appRoot = __dirname
 const appConfig = { /* log4js: { ... }, ... */ }
 
