@@ -1,7 +1,7 @@
 {
-  "name": "@luobotang/koa-mount",
+  "name": "@koa-framework/koa-mount",
   "version": "0.3.1",
-  "description": "router extension for @luobotang/koa-framework",
+  "description": "router extension for @koa-framework/koa-framework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,6 @@
     "koa-mount": "^4.0.0"
   },
   "peerDependencies": {
-    "@luobotang/koa-framework": "^0.3.0"
+    "@koa-framework/koa-framework": "^0.3.0"
   }
 }

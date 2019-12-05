@@ -1,7 +1,7 @@
 {
-  "name": "@luobotang/koa-multer",
+  "name": "@koa-framework/koa-multer",
   "version": "0.3.0",
-  "description": "multer plugin for @luobotang/koa-framework",
+  "description": "multer plugin for @koa-framework/koa-framework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

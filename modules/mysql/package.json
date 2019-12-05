@@ -1,7 +1,7 @@
 {
-  "name": "@luobotang/koa-mysql",
+  "name": "@koa-framework/koa-mysql",
   "version": "0.3.1",
-  "description": "mysql plugin for @luobotang/koa-framework",
+  "description": "mysql plugin for @koa-framework/koa-framework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,7 +1,7 @@
 {
-  "name": "@luobotang/koa-redis",
+  "name": "@koa-framework/koa-redis",
   "version": "0.3.0",
-  "description": "ioredis plugin for @luobotang/koa-framework",
+  "description": "ioredis plugin for @koa-framework/koa-framework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

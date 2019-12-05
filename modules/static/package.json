@@ -1,7 +1,7 @@
 {
-  "name": "@luobotang/koa-static",
+  "name": "@koa-framework/koa-static",
   "version": "0.3.0",
-  "description": "static plugin for @luobotang/koa-framework",
+  "description": "static plugin for @koa-framework/koa-framework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,7 @@
     "koa-static": "^5.0.0"
   },
   "peerDependencies": {
-    "@luobotang/koa-framework": "^0.3.0"
+    "@koa-framework/koa-framework": "^0.3.0"
   },
   "engines": {
     "node": ">=8.3.0"

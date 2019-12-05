@@ -1,7 +1,7 @@
 {
-  "name": "@luobotang/koa-nos",
+  "name": "@koa-framework/koa-nos",
   "version": "0.3.0",
-  "description": "NOS client plugin for @luobotang/koa-framework",
+  "description": "NOS client plugin for @koa-framework/koa-framework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,6 @@
     "@xgheaven/nos-node-sdk": "^0.2.5"
   },
   "peerDependencies": {
-    "@luobotang/koa-framework": "^0.3.0"
+    "@koa-framework/koa-framework": "^0.3.0"
   }
 }
