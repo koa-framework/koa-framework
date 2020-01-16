@@ -1,0 +1,15 @@
+{
+  "name": "@koa-framework/koa-schema-validate",
+  "version": "0.3.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "luobotang",
+  "license": "MIT",
+  "dependencies": {
+    "@luobotang/schema-validate": "^0.1.2"
+  }
+}
