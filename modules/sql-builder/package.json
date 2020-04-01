@@ -1,0 +1,14 @@
+{
+  "name": "@koa-framework/sql-builder",
+  "version": "0.3.0",
+  "description": "Sql builder for @koa-framework/koa-framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "luobotang",
+  "license": "MIT",
+  "peerDependencies": {
+    "@koa-framework/koa-mysql": "^0.3.1"
+  }
+}
