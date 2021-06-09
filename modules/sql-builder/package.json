@@ -1,6 +1,6 @@
 {
   "name": "@koa-framework/sql-builder",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Sql builder for @koa-framework/koa-framework",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "luobotang",
   "license": "MIT",
   "peerDependencies": {
-    "@koa-framework/koa-mysql": "^0.3.1"
+    "@koa-framework/koa-mysql": "^0.3.2"
   }
 }
