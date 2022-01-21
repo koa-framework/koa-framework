@@ -9,7 +9,7 @@
   "dependencies": {
     "koa": "^2.8.1",
     "koa-trie-router": "^2.1.7",
-    "log4js": "^5.1.0"
+    "log4js": "^6.4.0"
   },
   "devDependencies": {
     "eslint": "^6.4.0"
